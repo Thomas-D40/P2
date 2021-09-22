@@ -1,6 +1,144 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap');
 
 
 body {
     font-family: 'Raleway', sans-serif;
+}
+
+#localisation-icon, #accomodations-in-marseille, #famous, footer {
+    background-color: #f2f2f2;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: 600;
+}
+/*********** NAVBAR **************/
+
+nav {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+header li {
+    float: right;
+}
+
+header li a {
+    text-align: center;
+    padding: 45px 20px;
+}
+
+/* Sélection ville */
+
+#city-select {
+    display: flex;
+}
+
+#localisation-icon {
+    border-radius: 16px 0px 0px 16px;
+    padding: 14px;
+}
+
+#city-name {
+    border: 1px solid #f2f2f2;
+    padding-left: 15px;
+}
+
+#research-btn {
+    border: none;
+    background-color: #0065FC;
+    color: white;
+    padding: 15px;
+    border-radius: 0px 16px 16px 0px;
+}
+
+/* Filtre  */
+
+#filter {
+    margin: 14px auto;
+}
+
+.filter-list {
+    border-radius: 50px;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid #f2f2f2;
+    margin: 10px 15px;
+}
+
+
+.logo  {
+    border-radius: 50%;
+    padding: 12px;
+    background-color: #DEEBFF;
+    color: #0065FC;
+    position: relative;
+    left: -12px;
+}
+
+#fam {
+    padding: 12px 15px;
+}
+
+.filter-type {
+    font-weight: bold;
+    padding: 10px;
+}
+
+#info-circle {
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    border: 1px solid black;
+    text-align: center;
+    color: #0065FC;
+    margin: auto;
+  
+}
+
+
+ /* Hébergements  */
+
+#accomodations-in-marseille {
+    border-radius: 40px;
+    margin: 25px 15px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+}
+
+#cards .card {
+    width: 250px;
+    height: 150px;
+    border-radius: 40px;
+    margin: 25px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 4px solid white;
+}
+
+.card-picture {
+    width: 100%;
+    height: 50%;
+    background-position: center;
 }
