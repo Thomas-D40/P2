@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;750&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/dd6c40669c.js" crossorigin="anonymous"></script>
 </head>
@@ -13,28 +14,31 @@
 <header>
     <nav>
         <img src="./images/logo/Reservia.svg" alt="logo">
-        <ul>            
-            <li><a href="#">Hébergements</a></li>
-            <li><a href="#activities">Activités</a></li>
-            <li ><a href="" target="_blank" id="inscription">S'inscrire</a></li>            
-        </ul>
+        <div id="right-side">
+
+            <ul>            
+                <li><a href="#">Hébergements</a></li>
+                <li><a href="#activities">Activités</a></li>            
+            </ul>
+            <a href="" target="_blank" id="inscription">S'inscrire</a>
+        </div>
     </nav>
 </header>
 <main>
     <section id="research">
-        <h1 class="section-title">Trouvez votre hébergement pour des vacances de rêve</h1>
-        <p class="abstract">En plein centre ville ou en pleine nature</p>
-        <div id="city-select">
+        <h1 id="main-title">Trouvez votre hébergement pour des vacances de rêve</h1>
+        <p>En plein centre ville ou en pleine nature</p>
+        <div class="city-select">
             <i class="fas fa-map-marker-alt"id="localisation-icon"></i>
             <input type="text" value="Marseille, France" id="city-name">
             <button id="research-btn">Rechercher</button>
 
         </div>
         <div id="filter">
-            <span class="options">Filtres</span>
+            <span id="filtre">Filtres</span>
             <button class="filter-list">
                 <span class="logo"><i class="fas fa-money-bill-wave"></i></span>
-                <span class="filter-type">Economique</span>
+                <span class="filter-type">Économique</span>
             </button>
             <button class="filter-list">
                 <span class="logo" id="fam"><i class="fas fa-child"></i></span>
@@ -58,7 +62,7 @@
 
     <section id="accomodations">
         <div id="marseille">
-            <h1 class="section-title">Hébergements à Marseille</h1>
+            <h1 id="section-title">Hébergements à Marseille</h1>
             <div id="cards">
                 <a href="#" class="card">
                     <img src="./images/hebergements/cannebiere.jpg" alt="Auberge la Cannebière">
@@ -152,7 +156,7 @@
                 </a>
                
             </div>
-            <p class="options">Afficher plus</p>
+            <h3 id="plus">Afficher plus</h3>
         </div>
 
 
@@ -301,7 +305,7 @@
             <li><a href="#">Soumettre votre hôtel</a></li>
         </ul>
     </div>
-    <div class="footer-info" id="assistance">
+    <div class="footer-info">
         <h3>Assistance</h3>
         <ul>
             <li><a href="#">Centre d'aide</a></li>

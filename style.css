@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap');
-
+html {
+    scroll-behavior: smooth;
+}
  /* General settings */
 
 body {
@@ -26,14 +27,15 @@ a {
 }
 
 h1 {
-    font-weight: 900;
-    font-size: 1.25em;
-    margin-top: 20px;
+    font-weight: 750;
+    font-size: 1.35em;
+    padding-bottom: 10px;
 }
 
-h3 {
-    font-weight: 600;
-    font-size: 1.1em;
+h3, #inscription, #city-name, #research-btn, .filter-list, #filtre {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
 }
 
 header, main {
@@ -41,7 +43,7 @@ header, main {
 }
 
 .card {
-    border-radius: 40px;
+    border-radius: 20px;
     box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.62);
     background-color: white;
 }
@@ -57,9 +59,14 @@ nav {
     position: fixed;
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
     background-color: white;
     z-index: 1;
+    padding-top: 10px;
+}
+
+#right-side {
+    display: flex;
+    justify-content: space-around;
 }
 
 nav ul {
@@ -67,24 +74,38 @@ nav ul {
     justify-content: space-around;
 }
 
-nav li {
-    padding-right: 60px;
+nav li a, #inscription {
+    margin-right: 40px;
+    padding: 20px 5px 0 5px;
 }
 
-/* Sélection ville */
+#inscription {
+    padding-top: 15px;
+}
 
-#city-select {
+
+/* Sélection ville */
+#main-title {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+#research p {
+    margin-top: 8px;
+}
+
+.city-select {
     display: flex;
 }
 
 #localisation-icon {
     border-radius: 16px 0px 0px 16px;
-    padding: 14px;
+    padding: 17px;
 }
 
 #city-name {
     border: 1px solid #f2f2f2;
-    padding-left: 15px;
+    padding: 15px;
 }
 
 #research-btn {
@@ -104,9 +125,10 @@ nav li {
 .filter-list {
     border-radius: 50px;
     padding: 10px;
-    background-color: white;
+    background: linear-gradient(90deg,#DEEBFF 0%, #ffffff 20%, #ffffff 100%);
     border: 2px solid #f2f2f2;
     margin: 10px 15px;
+    transition: 1s ease;
 }
 
 
@@ -124,44 +146,55 @@ nav li {
 
 .filter-type {
     font-weight: bold;
-    padding: 10px;
+    padding: 10px 10px 10px 0;
 }
 
 #info-circle {
-    width: 21px;
-    height: 21px;
-    border-radius: 50%;
-    border: 1px solid black;
     text-align: center;
 }
 
+#info-circle i {
+    font-size: 0.9em;
+    border-radius: 50%;
+    border: 1px solid #f2f2f2;
+    padding: 7px 12px;
+}
 
+#result {
+    padding: 10px 0;
+}
  /* Hébergements  */
+
 #accomodations {
     display: flex;
     justify-content: space-between;
+    padding-top: 20px;
 }
 
 
 #marseille {
     border-radius: 40px;
-    margin: 25px 0px;
     padding: 25px;
-    width: 880px;
+    width: 830px;
     display: flex;
     flex-direction: column;
+
 }
 
+#marseille h1, #plus {
+    padding-left: 10px;
+}
 
 #cards {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
 #cards .card {
     width: 240px;
     height: 200px;
-    margin: 10px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -172,12 +205,12 @@ nav li {
     box-sizing: border-box;
     display: block;
     width: 238px;
-    height: 113px;
+    max-height: 120px;
     object-fit: cover;
 }
 
 .card-body {
-    height: 80px;
+    height: 75px;
     font-size: 0.75em;
 }
 
@@ -188,13 +221,11 @@ nav li {
 /* Populaire */
 
 #famous {
-    margin: 25px;
-    padding: 35px 40px;
+    padding: 25px;
     width: 420px;
     height: 625px;
     border-radius: 40px;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
 }
 
@@ -263,6 +294,10 @@ nav li {
     flex-shrink: 0;
 }
 
+#spots .card-title {
+    padding: 10px 0 0 10px;
+}
+
 #spot1 .card , #spot4 .card {
     height: 445px;
 }
@@ -299,24 +334,38 @@ nav li {
 /*************************************            FOOTER             *************************** */
 
 footer {
-    height: 218px;
+    height: 220px;
     display: flex;
-    justify-content: space-around;
 }
 
+.footer-info {
+    min-width: 450px;
+}
 footer h3 {
-    padding-left: 40px;
-    padding-top: 20px;
+    padding: 20px 0 0 40px;
 }
 .footer-info li {
     padding-top: 15px;
 }
-#assistance {
-    padding-right: 300px;
-}
 
 
 /* Animations liens  */
+
+nav a:hover {
+    color: #0065FC;
+}
+
+nav a:focus {
+    border-top: 3px solid #0065FC;
+    color: #0065FC;
+}
+
+#research-btn:hover {
+    color: #0065FC;
+    background-color: white;
+    border: #0065FC 1px solid;
+    transition: 0.5s ease-in-out;
+}
 
 #accomodations a:hover, #activities a:hover 
 {
@@ -325,5 +374,7 @@ footer h3 {
 }
 
 .filter-list:hover {
-    background-color:#DEEBFF;
+    background:#DEEBFF;
+    transition: 0.75s ease-in-out;
 }
+
