@@ -8,7 +8,7 @@ body {
     font-family: 'Raleway', sans-serif;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 0;
 }
 
 header, main {
@@ -43,6 +43,9 @@ h3, #inscription, #city-name, #research-btn, .filter-list, #filtre {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 1.2em;
+}
+p {
+    font-size: 1.1em;
 }
 
 .card {
@@ -248,6 +251,7 @@ nav li a {
 }
 
 #most-famous {
+    min-width: 85%;
     display: flex;
     justify-content: space-between;
 }
@@ -279,8 +283,11 @@ nav li a {
     width: 128px;
 }
 
-#wanted .rating {
-    padding-top: 45px;
+#wanted .card-body {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
@@ -288,7 +295,7 @@ nav li a {
 /* Activités **********************************************************************************************************************/
 
 #activities {
-    margin: 40px 30px 40px 0;
+    margin: 40px 0;
 }
 
 #spots {
@@ -408,7 +415,6 @@ nav a:focus {
 {
     main, header {
         width: 100%;
-        align-items: initial;
     }
     h1 {
         font-size: 1.2em;
@@ -482,24 +488,25 @@ nav a:focus {
 
     .filter-list {
         margin-left: 0;
+        margin-right: 1%;
     }
 
 
     #accomodations {
         flex-direction: column-reverse;
     }
-    
+
     #marseille, #research, #activities
     {
         background-color: white;
-        max-width: 90%;
-        padding-left: 25px;
-        justify-content: center;
+        max-width: 100%;
+        padding-left: 5%;
+
     }
     
-    #cards {
+    #marseille, #famous {
         flex-direction: column;
-        align-items: center;
+        padding: 25px 0 0 0;
     }
     
     #marseille .card, #activities .card {
@@ -510,23 +517,40 @@ nav a:focus {
     #marseille img {
         max-height: 115px;
     }
+    #marseille h1, #marseille #plus, #famous h1 {
+        padding-left: 5%;
+    }
+    #most-famous {
+        padding-right: 5%;
+    }
 
     #famous {
-        width: 100%;
         border-radius: initial;
+        max-width: 100%;
+    }
+    #wanted {
+        width: 100%;
+        align-items: center;
+    }
+    #wanted .card {
+        width: 90%;
     }
     #spots {
         height: initial;
         align-items: center;
+        align-items: center;
     }
 
     #spot1, #spot2, #spot3, #spot4, #spot5, #spot6 {
-        width: 90%;
+        width: 100%;
+        justify-content: center;
+    }
+    #spots .card {
+        width: 95%;
     }
 
 
     footer {
-        width: 100%;
         flex-direction: column;
         height: initial;
     }
@@ -534,4 +558,85 @@ nav a:focus {
         width: 100%;
     }
 
+}
+
+@media all and (min-width: 768px) and (max-width: 991px)
+{
+    main, header, nav {
+        width: 96%;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    h1 {
+        font-size: 1.2em;
+    }
+    h3, #inscription, #city-name, #research-btn, .filter-list, #filtre {
+        font-size: 1.1em;
+    }
+    nav {
+        position: static;
+    }
+
+    #filtre {
+        display: block;
+    }
+
+    #accomodations {
+        flex-direction: column-reverse;
+        margin-right: 0;
+    }
+    #famous, #marseille {
+        max-width: 96%;
+        margin-bottom: 15px;
+    }
+    #famous {
+        max-height: 415px;
+        background-color: white;
+    }
+    #wanted {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    #wanted .card {
+        width: 40%;
+    }
+
+    #marseille .card {
+        width: 25%;
+    }
+
+
+    #spots {
+        flex-direction: row;
+        height: 100%;
+        justify-content: space-around;
+    }
+
+
+    #spots .card {
+        height: 240px;
+        margin: 25px 0;
+    }
+}
+
+@media all and (min-width: 992px) and (max-width: 1350px)
+{
+    main, header, nav {
+        width: 96%;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    #cards .card {
+        width: 40%;
+    }
+    #spots {
+        flex-direction: row;        
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    #spots .card {
+        height: 240px;
+        margin: 25px 0;
+    }
 }
