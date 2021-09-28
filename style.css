@@ -231,7 +231,6 @@ nav li a {
     justify-content: center;
     height: 75px;
     font-size: 0.75em;
-    flex-shrink: 0;
 }
 
 .card-body h3, .card-body p {
@@ -560,6 +559,7 @@ nav a:focus {
 
 }
 
+
 @media all and (min-width: 768px) and (max-width: 991px)
 {
     main, header, nav {
@@ -592,15 +592,24 @@ nav a:focus {
     #famous {
         max-height: 415px;
         background-color: white;
+        height: initial;
+    }
+    #famous-logo {
+        display: none;
     }
     #wanted {
+        height: initial;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
     }
     #wanted .card {
-        width: 40%;
+        width: 25%;
     }
+    #wanted img {
+        width: 45%;
+    }
+
 
     #marseille .card {
         width: 25%;
@@ -619,6 +628,7 @@ nav a:focus {
         margin: 25px 0;
     }
 }
+
 
 @media all and (min-width: 992px) and (max-width: 1350px)
 {
