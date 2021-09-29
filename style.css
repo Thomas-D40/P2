@@ -54,11 +54,11 @@ p {
     background-color: white;
 }
 
-.logo, #info-circle, .rating, #inscription {
+.logo, #info-circle, .good, #inscription {
     color: #0065FC;
 }
 
-.empty {
+.empty, .bad {
     color: #f2f2f2;
 }
 /*********** NAVBAR ********************************************************************************************************/
@@ -633,7 +633,7 @@ nav a:focus {
 @media all and (min-width: 992px) and (max-width: 1350px)
 {
     main, header, nav {
-        width: 96%;
+        width: 94%;
         padding-left: 2%;
         padding-right: 2%;
     }
