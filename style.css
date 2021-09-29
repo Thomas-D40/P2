@@ -35,14 +35,14 @@ a {
 
 h1 {
     font-weight: 750;
-    font-size: 1.35em;
+    font-size: 1.4em;
     padding-bottom: 10px;
 }
 
 h3, #inscription, #city-name, #research-btn, .filter-list, #filtre {
     font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 1.2em;
+    font-weight: 750;
+    font-size: 1.3em;
 }
 p {
     font-size: 1.1em;
@@ -50,7 +50,7 @@ p {
 
 .card {
     border-radius: 20px;
-    box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.62);
+    box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.10);
     background-color: white;
 }
 
@@ -143,7 +143,9 @@ nav li a {
     border: 2px solid #f2f2f2;
     margin: 10px 15px;
     transition: 1s ease;
+    position: relative;
 }
+
 
 
 .logo  {
@@ -209,7 +211,7 @@ nav li a {
 
 #cards .card {
     width: 240px;
-    height: 200px;
+    height: 190px;
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
@@ -221,7 +223,7 @@ nav li a {
     box-sizing: border-box;
     display: block;
     width: 100%;
-    max-height: 120px;
+    max-height: 110px;
     object-fit: cover;
     flex-shrink: 1;
 }
@@ -310,7 +312,7 @@ nav li a {
     flex-direction: column-reverse;
     width: 300px;
     overflow: hidden;
-    margin: 25px 50px 25px 0;
+    margin: 20px 50px 20px 0;
     justify-content: flex-start;
 }
 
@@ -364,13 +366,16 @@ footer {
     height: 220px;
     display: flex;
     justify-content: center;
+    /* align-items: center; */
 }
 
 .footer-info {
+    padding-top: 30px;
     width: 450px;
 }
-footer h3 {
-    padding: 20px 0 0 40px;
+
+footer ul {
+    padding-left: 0;
 }
 .footer-info li {
     padding-top: 15px;
@@ -379,13 +384,9 @@ footer h3 {
 
 /* Animations liens  ***********************************************************************************************************/
 
-nav a:hover {
+nav a:hover, nav a:focus {
     color: #0065FC;
-}
-
-nav a:focus {
     border-top: 3px solid #0065FC;
-    color: #0065FC;
 }
 
 #research-btn:hover {
@@ -405,8 +406,6 @@ nav a:focus {
     background:#DEEBFF;
     transition: 0.75s ease-in-out;
 }
-
-
 
 /* MEDIA QUERIES  ****************************************************************************************************************/
 
@@ -555,6 +554,7 @@ nav a:focus {
     }
     .footer-info {
         width: 100%;
+        padding-left: 2%;
     }
 
 }
@@ -562,10 +562,14 @@ nav a:focus {
 
 @media all and (min-width: 768px) and (max-width: 991px)
 {
-    main, header, nav {
+    main, footer {
         width: 96%;
         padding-left: 2%;
         padding-right: 2%;
+    }
+    nav, header {
+        width: 98%;
+        padding-left: 2%;
     }
     h1 {
         font-size: 1.2em;
@@ -582,12 +586,16 @@ nav a:focus {
     }
 
     #accomodations {
+        width: 96%;
         flex-direction: column-reverse;
-        margin-right: 0;
     }
     #famous, #marseille {
         max-width: 96%;
         margin-bottom: 15px;
+        margin-right: 0;
+    }
+    #cards {
+        max-width: 100%;
     }
     #famous {
         max-height: 415px;
@@ -604,7 +612,7 @@ nav a:focus {
         justify-content: space-around;
     }
     #wanted .card {
-        width: 25%;
+        width: 30%;
     }
     #wanted img {
         width: 45%;
@@ -613,6 +621,10 @@ nav a:focus {
 
     #marseille .card {
         width: 25%;
+    }
+    #activities h1 {
+        padding-left: 25px;
+        padding-top: 10px;
     }
 
 
@@ -625,15 +637,15 @@ nav a:focus {
 
     #spots .card {
         height: 240px;
-        margin: 25px 0;
+        margin: 25px 5px;
     }
 }
 
 
 @media all and (min-width: 992px) and (max-width: 1350px)
 {
-    main, header, nav {
-        width: 94%;
+    main, header, nav, footer {
+        width: 96%;
         padding-left: 2%;
         padding-right: 2%;
     }
@@ -647,6 +659,6 @@ nav a:focus {
     }
     #spots .card {
         height: 240px;
-        margin: 25px 0;
+        margin: 25px 10px;
     }
 }
