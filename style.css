@@ -20,7 +20,7 @@ main {
 }
 
 
-#localisation-icon, #marseille, #famous, footer {
+#city__icon, .marseille, #famous, footer {
     background-color: #f2f2f2;
 }
 
@@ -39,7 +39,7 @@ h1 {
     padding-bottom: 10px;
 }
 
-h3, #inscription, #city-name, #research-btn, .filter-list, #filtre {
+h3, #inscription, .city__input, .city__btn, .filter-list, #filtre {
     font-family: 'Raleway', sans-serif;
     font-weight: 750;
     font-size: 1.3em;
@@ -54,7 +54,7 @@ p {
     background-color: white;
 }
 
-.logo, #info-circle, .good, #inscription {
+.logo, .result__symbol, .good, #inscription {
     color: #0065FC;
 }
 
@@ -73,7 +73,7 @@ nav {
     padding-top: 10px;
 }
 
-#right-side {
+.nav__right {
     display: flex;
     justify-content: space-around;
 }
@@ -100,25 +100,25 @@ nav li a {
     padding: 0;
 }
 
-#research p {
+.research p {
     margin-top: 8px;
 }
 
-.city-select {
+.city {
     display: flex;
 }
 
-#localisation-icon {
+#city__icon {
     border-radius: 16px 0px 0px 16px;
     padding: 17px;
 }
 
-#city-name {
+.city__input {
     border: 1px solid #f2f2f2;
     padding: 15px;
 }
 
-#research-btn {
+.city__btn {
     border: none;
     background-color: #0065FC;
     color: white;
@@ -132,7 +132,7 @@ nav li a {
 
 /* Filtre  *******************************************************************************************************/
 
-#filter {
+.filter {
     margin: 14px auto;
 }
 
@@ -168,23 +168,25 @@ nav li a {
     padding: 10px 10px 10px 0;
 }
 
-#info-circle {
+.result {
+    padding: 10px 0;
+}
+
+.result__symbol {
     text-align: center;
 }
 
-#info-circle i {
+.result__symbol i {
     font-size: 0.9em;
     border-radius: 50%;
     border: 1px solid #f2f2f2;
     padding: 7px 12px;
 }
 
-#result {
-    padding: 10px 0;
-}
+
  /* Hébergements  **********************************************************************************************/
 
-#accomodations {
+.accomodations {
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
@@ -192,7 +194,7 @@ nav li a {
 }
 
 
-#marseille {
+.marseille {
     margin-right: 40px;
     border-radius: 40px;
     padding: 25px;
@@ -202,7 +204,7 @@ nav li a {
 
 }
 
-#marseille h1, #plus {
+.marseille h1, #plus {
     padding-left: 10px;
 }
 
@@ -391,14 +393,14 @@ nav a:hover, nav a:focus {
     border-top: 3px solid #0065FC;
 }
 
-#research-btn:hover {
+.city__btn:hover {
     color: #0065FC;
     background-color: white;
     border: #0065FC 1px solid;
     transition: 0.5s ease-in-out;
 }
 
-#accomodations a:hover, #activities a:hover 
+.accomodations a:hover, #activities a:hover 
 {
     transform: scale(1.05);
     transition: ease, 0.5s;
@@ -420,7 +422,7 @@ nav a:hover, nav a:focus {
     h1 {
         font-size: 1.2em;
     }
-    h3, #inscription, #city-name, #research-btn, .filter-list, #filtre {
+    h3, #inscription, .city__input, .city__btn, .filter-list, #filtre {
         font-size: 1.1em;
     }
 
@@ -475,9 +477,6 @@ nav a:hover, nav a:focus {
         padding-top: 20px;
     }
 
-    #city-select {
-        width: 60%;
-    }
 
     #rechercher {
         display: none;
@@ -496,11 +495,11 @@ nav a:hover, nav a:focus {
     }
 
 
-    #accomodations {
+    .accomodations {
         flex-direction: column-reverse;
     }
 
-    #marseille, #research, #activities
+    .marseille, .research, #activities
     {
         background-color: white;
         max-width: 100%;
@@ -508,22 +507,22 @@ nav a:hover, nav a:focus {
 
     }
     
-    #marseille, #famous {
+    .marseille, #famous {
         flex-direction: column;
         padding: 25px 0 0 0;
         margin-right: 0;
         width: 100%;
     }
     
-    #marseille .card, #activities .card {
+    .marseille .card, #activities .card {
         height: 190px;
         width: 90%;
     }
 
-    #marseille img {
+    .marseille img {
         max-height: 115px;
     }
-    #marseille h1, #marseille #plus, #famous h1 {
+    .marseille h1, .marseille #plus, #famous h1 {
         padding-left: 5%;
     }
     #most-famous {
@@ -583,7 +582,7 @@ nav a:hover, nav a:focus {
     h1 {
         font-size: 1.2em;
     }
-    h3, #inscription, #city-name, #research-btn, .filter-list, #filtre {
+    h3, #inscription, .city__input, .city__btn, .filter-list, #filtre {
         font-size: 1.1em;
     }
     nav {
@@ -594,16 +593,16 @@ nav a:hover, nav a:focus {
         display: block;
     }
 
-    #accomodations {
+    .accomodations {
         width: 100%;
         flex-direction: column-reverse;
     }
-    #famous, #marseille {
+    #famous, .marseille {
         max-width: 96%;
         margin-bottom: 15px;
         margin-right: 0;
     }
-    #marseille {
+    .marseille {
         width: 95%;
     }
     #cards {
@@ -631,7 +630,7 @@ nav a:hover, nav a:focus {
     }
 
 
-    #marseille .card {
+    .marseille .card {
         width: 25%;
     }
     #activities h1 {
@@ -661,7 +660,7 @@ nav a:hover, nav a:focus {
         padding-left: 2%;
         padding-right: 2%;
     }
-    #marseille {
+    .marseille {
         width: auto;
     }
     #cards .card {
