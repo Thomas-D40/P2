@@ -20,7 +20,7 @@ main {
 }
 
 
-#city__icon, .marseille, #famous, footer {
+#city__icon, #marseille, #famous, footer {
     background-color: #f2f2f2;
 }
 
@@ -194,7 +194,7 @@ nav li a {
 }
 
 
-.marseille {
+#marseille {
     margin-right: 40px;
     border-radius: 40px;
     padding: 25px;
@@ -204,7 +204,7 @@ nav li a {
 
 }
 
-.marseille h1, #plus {
+#marseille h1, #plus {
     padding-left: 10px;
 }
 
@@ -499,7 +499,7 @@ nav a:hover, nav a:focus {
         flex-direction: column-reverse;
     }
 
-    .marseille, .research, #activities
+    #marseille, .research, #activities
     {
         background-color: white;
         max-width: 100%;
@@ -507,22 +507,22 @@ nav a:hover, nav a:focus {
 
     }
     
-    .marseille, #famous {
+    #marseille, #famous {
         flex-direction: column;
         padding: 25px 0 0 0;
         margin-right: 0;
         width: 100%;
     }
     
-    .marseille .card, #activities .card {
+    #marseille .card, #activities .card {
         height: 190px;
         width: 90%;
     }
 
-    .marseille img {
+    #marseille img {
         max-height: 115px;
     }
-    .marseille h1, .marseille #plus, #famous h1 {
+    #marseille h1, #marseille #plus, #famous h1 {
         padding-left: 5%;
     }
     #most-famous {
@@ -597,12 +597,12 @@ nav a:hover, nav a:focus {
         width: 100%;
         flex-direction: column-reverse;
     }
-    #famous, .marseille {
+    #famous, #marseille {
         max-width: 96%;
         margin-bottom: 15px;
         margin-right: 0;
     }
-    .marseille {
+    #marseille {
         width: 95%;
     }
     #cards {
@@ -630,7 +630,7 @@ nav a:hover, nav a:focus {
     }
 
 
-    .marseille .card {
+    #marseille .card {
         width: 25%;
     }
     #activities h1 {
@@ -660,7 +660,7 @@ nav a:hover, nav a:focus {
         padding-left: 2%;
         padding-right: 2%;
     }
-    .marseille {
+    #marseille {
         width: auto;
     }
     #cards .card {
