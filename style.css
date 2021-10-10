@@ -388,7 +388,7 @@ footer ul {
 
 /**************************** ANIMATIONS LINKS  ***********************************************************************************************************/
 
-nav a:hover, nav a:focus {
+nav li a:hover, nav li a:focus {
     color: #0065FC;
     border-top: 3px solid #0065FC;
 }
